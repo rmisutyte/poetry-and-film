@@ -4,10 +4,12 @@ frontend:
     preBuild:
       commands:
         - yarn install
+    test:
+      commands:
+        - yarn run lint
     build:
       commands:
         - yarn run build
-        - yarn run lint
   artifacts:
     baseDirectory: .next
     files:
