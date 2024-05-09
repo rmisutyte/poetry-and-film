@@ -1,14 +1,37 @@
-.gallery {
-  display: grid;
-  /* background-color: papayawhip; */
-  grid-template-columns: repeat(3, 1fr);
-  padding: 24px 24px 24px;
-  column-gap: 24px;
-  row-gap: 24px;
+@media (min-width: 576px) {
+  .gallery {
+    display: grid;
+    /* background-color: papayawhip; */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 24px 24px;
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    display: grid;
+    /* background-color: papayawhip; */
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px 24px 24px;
+    column-gap: 24px;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery {
+    display: grid;
+    /* background-color: papayawhip; */
+    grid-template-columns: 1fr;
+    padding: 24px 24px 24px;
+    column-gap: 24px;
+    row-gap: 24px;
+  }
 }
 
 .tile {
   min-width: 200px;
-  min-height: 200px;
   /* background-color: papayawhip; */
 }
