@@ -1,0 +1,14 @@
+.gallery {
+  display: grid;
+  /* background-color: papayawhip; */
+  grid-template-columns: repeat(3, 1fr);
+  padding: 24px 24px 24px;
+  column-gap: 24px;
+  row-gap: 24px;
+}
+
+.tile {
+  min-width: 200px;
+  min-height: 200px;
+  /* background-color: papayawhip; */
+}
