@@ -1,11 +1,10 @@
 @media (min-width: 576px) {
   .gallery {
     display: grid;
-    /* background-color: papayawhip; */
     grid-template-columns: repeat(2, 1fr);
     padding: 24px 24px 24px;
-    column-gap: 24px;
-    row-gap: 24px;
+    grid-gap: 24px;
+    grid-auto-rows: min-content;
   }
 }
 
