@@ -1,122 +1,12 @@
 import styles from "./Gallery.module.css";
+import Tile from "./Tile";
 
-export default function Gallery() {
+export default function Gallery({ items = [] }) {
   return (
     <div className={styles.gallery}>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
-      <div className={styles.tile}>
-        <picture>
-          <source srcSet="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG" />
-          <img src="https://lonf-assets.s3.us-east-1.amazonaws.com/placeholder.JPG"></img>
-        </picture>
-      </div>
+      {items.map((item) => (
+        <Tile imageSrc={item.imageUrl} title={item.name} />
+      ))}
     </div>
   );
 }
