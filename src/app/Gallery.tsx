@@ -1,7 +1,12 @@
 import styles from "./Gallery.module.css";
 import Tile from "./Tile";
 
-export default function Gallery({ items = [] }) {
+type GalleryItem = {
+  imageUrl: string;
+  name: string;
+};
+
+export default function Gallery({ items }: { items: GalleryItem[] }) {
   return (
     <div className={styles.gallery}>
       {items.map((item, index) => (

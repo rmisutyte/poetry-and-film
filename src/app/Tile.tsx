@@ -1,6 +1,12 @@
 import styles from "./Tile.module.css";
 
-export default function Tile({ imageSrc, title, alt }) {
+type TileItem = {
+  imageSrc: string;
+  title: string;
+  alt: string;
+};
+
+export default function Tile({ imageSrc, title, alt }: TileItem) {
   return (
     <div className={styles.tile}>
       <picture>
