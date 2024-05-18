@@ -1,3 +1,13 @@
 .tile {
-  min-width: 200px;
+  /* min-width: 200px; */
+  /* -webkit-column-break-inside: avoid; */
+  display: inline-block;
+  width: 100%;
+  /* grid-row-end: span 10; */
+  /* background-color: papayawhip; */
+}
+
+.tileImage {
+  display: block;
+  width: 100%;
 }
