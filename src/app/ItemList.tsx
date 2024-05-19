@@ -24,11 +24,13 @@ export default function ItemList({
   }, [inView]);
 
   return (
-    <div className={styles.itemList}>
-      {items.map((item, index) => (
-        <Tile imageSrc={item.imageUrl} alt={item.name} key={index} />
-      ))}
-      <h2 ref={ref}>I am inside the viewport</h2>
-    </div>
+    <>
+      <div className={styles.itemList}>
+        {items.map((item, index) => (
+          <Tile imageSrc={item.imageUrl} alt={item.name} key={index} />
+        ))}
+      </div>
+      <div ref={ref}>I am inside the viewport</div>
+    </>
   );
 }

@@ -7,6 +7,9 @@ const esteban = Esteban({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Poems and film",
   description: "Life in poems and on film",
+  openGraph: {
+    title: "Poems and filmzzzz",
+  },
 };
 
 export default function RootLayout({
@@ -15,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={esteban.className}>{children}</body>
-    </html>
+    <>
+      <html lang="en">
+        <body className={esteban.className}>{children}</body>
+      </html>
+    </>
   );
 }
