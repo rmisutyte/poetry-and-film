@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Poems and filmzzzz",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
