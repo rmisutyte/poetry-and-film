@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { createApi } from "unsplash-js";
 
 export const useUnsplash = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,12 +18,14 @@ export const useUnsplash = () => {
     );
     const data = await response.json();
     const mappedPhotoDetails: { imageUrl: string; name: string }[] =
-      data.results.map((result) => {
-        return {
-          imageUrl: result.urls.regular,
-          name: result.alt_description || "generic description",
-        };
-      }) || [];
+      data.results.map(
+        (result: { urls: { regular: string }; alt_description: string }) => {
+          return {
+            imageUrl: result.urls.regular,
+            name: result.alt_description || "generic description",
+          };
+        }
+      ) || [];
     setPhotos([...(photos ? photos : []), ...mappedPhotoDetails]);
     setLoading(false);
   };
