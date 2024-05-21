@@ -14,30 +14,19 @@ export const useUnsplash = () => {
   };
 
   const fetchPhotos = async () => {
-    const unsplash = createApi({
-      accessKey: process.env.NEXT_PUBLIC_API_ACCESS_KEY || "",
-    });
-    unsplash.search
-      .getPhotos({
-        query: "film photography",
-        page: currentPage,
-        perPage: 10,
-      })
-      .then((res) => {
-        const mappedPhotoDetails: { imageUrl: string; name: string }[] =
-          res.response?.results.map((result) => {
-            return {
-              imageUrl: result.urls.regular,
-              name: result.alt_description || "generic description",
-            };
-          }) || [];
-        setPhotos([...(photos ? photos : []), ...mappedPhotoDetails]);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
+    const response = await fetch(
+      `/api/images?query=film+photo&per_page=10&page=${currentPage}`
+    );
+    const data = await response.json();
+    const mappedPhotoDetails: { imageUrl: string; name: string }[] =
+      data.results.map((result) => {
+        return {
+          imageUrl: result.urls.regular,
+          name: result.alt_description || "generic description",
+        };
+      }) || [];
+    setPhotos([...(photos ? photos : []), ...mappedPhotoDetails]);
+    setLoading(false);
   };
 
   useEffect(() => {
