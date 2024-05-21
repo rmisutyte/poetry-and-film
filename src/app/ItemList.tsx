@@ -30,7 +30,7 @@ export default function ItemList({
           <Tile imageSrc={item.imageUrl} alt={item.name} key={index} />
         ))}
       </div>
-      <div ref={ref}>I am inside the viewport</div>
+      <div ref={ref}></div>
     </>
   );
 }
