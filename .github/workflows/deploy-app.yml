@@ -12,11 +12,18 @@ permissions:
   contents: read
 
 jobs:
-  AssumeRoleAndCallIdentity:
+  upload_assets:
+    name: Upload Assets
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
+
+      - name: Install deps
+        run: yarn install --frozen-lockfile
+
+      - name: Build the app
+        run: yarn build
 
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
@@ -24,6 +31,7 @@ jobs:
           role-to-assume: arn:aws:iam::187459772176:role/poems-and-film-role
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
-      - name: Sts GetCallerIdentity
+
+      - name: Copy assets
         run: |
-          aws sts get-caller-identity
+          aws s3 sync .next s3://poems-and-film-prod/test --region us-east-1
