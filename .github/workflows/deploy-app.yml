@@ -43,4 +43,4 @@ jobs:
 
       - name: Copy assets
         run: |
-          aws s3 sync .next s3://poems-and-film-prod/test/.next --region us-east-1
+          aws s3 sync .next s3://poems-and-film-prod/.next --region us-east-1
