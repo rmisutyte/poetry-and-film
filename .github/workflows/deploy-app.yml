@@ -19,6 +19,9 @@ jobs:
       - name: Git clone the repository
         uses: actions/checkout@v3
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Install deps
         run: yarn install --frozen-lockfile
 
