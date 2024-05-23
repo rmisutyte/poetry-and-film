@@ -1,5 +1,41 @@
-.skeleton {
-  width: 100vw;
-  height: 100vh;
-  background-color: aquamarine;
+@media (min-width: 576px) {
+  .skeletonGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px 24px 24px;
+    grid-gap: 24px;
+    /* grid-template-rows: masonry; */
+    /* grid-auto-rows: 300px; */
+
+    /* grid-auto-rows: 20px; */
+  }
+}
+
+@media (min-width: 1024px) {
+  .skeletonGrid {
+    display: grid;
+    /* background-color: papayawhip; */
+    grid-template-columns: repeat(3, 1fr);
+    padding: 24px 24px 24px;
+    grid-gap: 24px;
+    /* grid-auto-rows: 350px; */
+  }
+}
+
+@media (max-width: 575px) {
+  .skeletonGrid {
+    display: grid;
+    padding: 24px 24px 24px;
+    grid-gap: 24px;
+    justify-content: center;
+    /* grid-auto-rows: 350px; */
+  }
+}
+
+.loadingImageSkeleton {
+  display: block;
+  width: 100%;
+  background-image: linear-gradient(to right, #999999 0%, #edeef1 100%);
+  width: 300px;
+  height: 300px;
 }

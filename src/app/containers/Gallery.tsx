@@ -1,7 +1,7 @@
 "use client";
 
 import ItemList from "../ItemList";
-import LoadingSkeleton from "../LoadingSkeleton";
+import { LoadingSkeleton } from "../LoadingSkeleton";
 import { useUnsplash } from "@/hooks/useUnsplash";
 
 export const Gallery = () => {
