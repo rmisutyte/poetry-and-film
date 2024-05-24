@@ -1,5 +1,5 @@
 import styles from "./LoadingSkeleton.module.css";
-import ItemList from "./ItemList";
+import ItemList from "../ItemList/ItemList";
 
 export function ImageSkeleton() {
   return <div className={styles.loadingImageSkeleton}></div>;

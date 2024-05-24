@@ -1,8 +1,10 @@
-# Poems & Film React app
+# Poems & Film app
+
+The app is deployed to https://www.poems-and-film.com
 
 ## Local development
 
-First, run the development server:
+Run the development server:
 
 ```bash
 yarn dev

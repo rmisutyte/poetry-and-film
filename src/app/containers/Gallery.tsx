@@ -1,10 +1,10 @@
 "use client";
 
-import ItemList from "../ItemList";
-import { LoadingSkeleton } from "../LoadingSkeleton";
-import { useUnsplash } from "@/hooks/useUnsplash";
+import ItemList from "../components/ItemList/ItemList";
+import { LoadingSkeleton } from "../components/LoadingSkeleton/LoadingSkeleton";
+import { useUnsplash } from "@/app/hooks/useUnsplash";
 
-export const Gallery = () => {
+export default function Gallery() {
   const { photos, fetchMorePhotos, loading } = useUnsplash();
   return (
     <>
@@ -15,4 +15,4 @@ export const Gallery = () => {
       )}
     </>
   );
-};
+}

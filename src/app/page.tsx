@@ -1,13 +1,6 @@
-import { Gallery } from "./containers/Gallery";
-import Header from "./Header";
+import Gallery from "./containers/Gallery";
+import Header from "./components/Header/Header";
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <main id="content">
-        <Gallery />
-      </main>
-    </>
-  );
+  return <Gallery />;
 }

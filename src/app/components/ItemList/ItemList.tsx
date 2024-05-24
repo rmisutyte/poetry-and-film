@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./ItemList.module.css";
-import Tile from "./Tile";
+import Tile from "../Tile/Tile";
 import { useInView } from "react-intersection-observer";
 
 type GalleryItem = {
