@@ -41,6 +41,6 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Copy assets
-        run: |
-          aws s3 sync .next s3://poems-and-film-prod/.next --region us-east-1
+      # - name: Copy assets
+      #   run: |
+      #     aws s3 sync .next s3://poems-and-film-prod/.next --region us-east-1
