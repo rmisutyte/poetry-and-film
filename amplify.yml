@@ -7,6 +7,7 @@ frontend:
     test:
       commands:
         - yarn run lint
+        - yarn run test
     build:
       commands:
         - yarn run build

@@ -1,7 +1,7 @@
 "use client";
 
-import ItemList from "../components/ItemList/ItemList";
-import { LoadingSkeleton } from "../components/LoadingSkeleton/LoadingSkeleton";
+import ItemList from "../../components/ItemList/ItemList";
+import { LoadingSkeleton } from "../../components/LoadingSkeleton/LoadingSkeleton";
 import { useUnsplash } from "@/app/hooks/useUnsplash";
 
 export default function Gallery() {

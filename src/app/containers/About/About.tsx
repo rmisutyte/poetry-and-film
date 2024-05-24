@@ -1,4 +1,4 @@
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 
 export default function About() {
   return <div>This is about page.</div>;
