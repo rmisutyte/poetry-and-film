@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
   const perPage = request.nextUrl.searchParams.get("per_page");
   const page = request.nextUrl.searchParams.get("page");
   const response = await fetch(
-    `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=${perPage}`,
+    `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=${perPage}&orientation=squarish`,
     {
       headers: {
         Authorization: `Client-ID ${process.env.NEXT_PUBLIC_API_ACCESS_KEY}`,
