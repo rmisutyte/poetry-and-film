@@ -4,21 +4,15 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 24px 24px 24px;
     grid-gap: 24px;
-    /* grid-template-rows: masonry; */
-    /* grid-auto-rows: 300px; */
-
-    /* grid-auto-rows: 20px; */
   }
 }
 
 @media (min-width: 1024px) {
   .skeletonGrid {
     display: grid;
-    /* background-color: papayawhip; */
     grid-template-columns: repeat(3, 1fr);
     padding: 24px 24px 24px;
     grid-gap: 24px;
-    /* grid-auto-rows: 350px; */
   }
 }
 
@@ -28,14 +22,31 @@
     padding: 24px 24px 24px;
     grid-gap: 24px;
     justify-content: center;
-    /* grid-auto-rows: 350px; */
   }
 }
 
 .loadingImageSkeleton {
-  display: block;
+  background-image: linear-gradient(
+    to right,
+    #eae4e4 30%,
+    #edeef1 50%,
+    #eae4e4 70%
+  );
+  background-color: #eae4e4;
+  /* background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png); */
+  /* background-position-x: 100%; */
+  background-size: 800px 100%;
+  animation: shimmer infinite 1s;
   width: 100%;
-  background-image: linear-gradient(to right, #999999 0%, #edeef1 100%);
-  width: 300px;
-  height: 300px;
+  padding-top: 100%;
+}
+
+@keyframes shimmer {
+  from {
+    background-position-x: 100%;
+  }
+
+  to {
+    background-position-x: -10%;
+  }
 }
