@@ -1,9 +1,5 @@
 .tile {
-  /* -webkit-column-break-inside: avoid; */
-  display: inline-block;
   width: 100%;
-  /* grid-row-end: span 10; */
-  /* background-color: papayawhip; */
 }
 
 .tileImage {

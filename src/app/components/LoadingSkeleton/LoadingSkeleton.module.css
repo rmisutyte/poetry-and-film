@@ -21,16 +21,17 @@
     display: grid;
     padding: 24px 24px 24px;
     grid-gap: 24px;
+    grid-template-columns: 1fr;
     justify-content: center;
   }
 }
 
 .loadingImageSkeleton {
   background-image: linear-gradient(
-    to right,
-    #eae4e4 30%,
+    -45deg,
+    #ebe4e4 35%,
     #edeef1 50%,
-    #eae4e4 70%
+    #ebe4e4 65%
   );
   background-color: #eae4e4;
   /* background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png); */
