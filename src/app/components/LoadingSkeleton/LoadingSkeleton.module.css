@@ -1,29 +1,8 @@
-@media (min-width: 576px) {
-  .skeletonGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 24px 24px 24px;
-    grid-gap: 24px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .skeletonGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 24px 24px 24px;
-    grid-gap: 24px;
-  }
-}
-
-@media (max-width: 575px) {
-  .skeletonGrid {
-    display: grid;
-    padding: 24px 24px 24px;
-    grid-gap: 24px;
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
+.skeletonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  padding: 24px 24px 24px;
+  grid-gap: 24px;
 }
 
 .loadingImageSkeleton {
@@ -36,7 +15,7 @@
   background-color: #eae4e4;
   /* background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png); */
   /* background-position-x: 100%; */
-  background-size: 800px 100%;
+  background-size: 800px;
   animation: shimmer infinite 1s;
   width: 100%;
   padding-top: 100%;
