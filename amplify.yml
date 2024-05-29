@@ -10,6 +10,8 @@ frontend:
         - yarn run test
     build:
       commands:
+        - env | grep -e MONGODB_URI >> .env.production
+        - env | grep -e BASE_ASSETS_URL >> .env.production
         - yarn run build
   artifacts:
     baseDirectory: .next
