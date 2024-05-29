@@ -1,6 +1,5 @@
 "use client";
 
-import { useUnsplash } from "@/app/hooks/useUnsplash";
 import ItemList from "../../components/ItemList/ItemList";
 import { LoadingSkeleton } from "../../components/LoadingSkeleton/LoadingSkeleton";
 
