@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useUnsplash = () => {
+export const usePersonalPhotos = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [photos, setPhotos] = useState<{ imageUrl: string; name: string }[]>(
     []
@@ -13,19 +13,13 @@ export const useUnsplash = () => {
   };
 
   const fetchPhotos = async () => {
-    const response = await fetch(
-      `/api/images?query=film+photo&per_page=10&page=${currentPage}`
-    );
+    const response = await fetch(`/api/images?per_page=10&page=${currentPage}`);
     const data = await response.json();
-    const mappedPhotoDetails: { imageUrl: string; name: string }[] =
-      data.results.map(
-        (result: { urls: { regular: string }; alt_description: string }) => {
-          return {
-            imageUrl: result.urls.regular,
-            name: result.alt_description || "generic description",
-          };
-        }
-      ) || [];
+    const mappedPhotoDetails = data.map(
+      (item: { imageUrl: string; name: string }) => {
+        return { imageUrl: item.imageUrl, name: item.name };
+      }
+    );
     setPhotos([...(photos ? photos : []), ...mappedPhotoDetails]);
     setLoading(false);
   };

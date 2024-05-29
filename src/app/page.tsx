@@ -1,5 +1,5 @@
-import Gallery from "./containers/Gallery/Gallery";
+import PersonalGallery from "./containers/PersonalGallery/PersonalGallery";
 
 export default function Home() {
-  return <Gallery />;
+  return <PersonalGallery />;
 }

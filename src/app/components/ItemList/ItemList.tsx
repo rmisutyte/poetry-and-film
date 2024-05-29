@@ -15,9 +15,10 @@ export default function ItemList({
   items: GalleryItem[];
   fetchMorePhotos: () => void;
 }) {
-  const { ref, inView } = useInView({ rootMargin: "200px 0px" });
+  const { ref, inView } = useInView({ rootMargin: "400px 0px" });
 
   useEffect(() => {
+    console.log(inView);
     if (inView && fetchMorePhotos) {
       fetchMorePhotos();
     }
