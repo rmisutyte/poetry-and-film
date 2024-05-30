@@ -10,13 +10,13 @@ export default function Modal({
   closeModal: () => void;
   children: React.ReactNode;
 }) {
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
     if (openModal) {
-      modalRef.current?.showModal();
+      modalRef.current!.showModal();
     } else {
-      modalRef.current?.close();
+      modalRef.current!.close();
     }
   }, [openModal]);
 
