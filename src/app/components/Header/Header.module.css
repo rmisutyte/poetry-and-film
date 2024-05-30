@@ -21,6 +21,13 @@
   grid-template-columns: repeat(4, 1fr) 120px;
   grid-auto-rows: minmax(30px, auto);
   grid-template-areas: "header . . . navigation";
-  border-bottom: 1px black solid;
-  background-color: gold;
+
+  background-image: linear-gradient(
+    45deg,
+    #f7eaea,
+    #f7cece,
+    #efd09e,
+    #b0f4d3,
+    #bde9f5
+  );
 }
