@@ -1,5 +1,6 @@
 import styles from "./Modal.module.css";
 import { useEffect, useRef } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function Modal({
   openModal,
@@ -23,12 +24,8 @@ export default function Modal({
   return (
     <dialog ref={modalRef} className={styles.modal}>
       <div className={styles.content}>
-        <button
-          type="button"
-          onClick={closeModal}
-          className={styles.closeButton}
-        >
-          CLOSE
+        <button onClick={closeModal} className={styles.closeButton}>
+          <AiOutlineClose size={28} />
         </button>
         {children}
       </div>
