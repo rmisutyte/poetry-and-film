@@ -9,7 +9,6 @@ export const usePersonalPhotos = () => {
 
   const fetchMorePhotos = () => {
     setCurrentPage(currentPage + 1);
-    console.log(currentPage);
   };
 
   const fetchPhotos = async () => {

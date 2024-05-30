@@ -1,0 +1,20 @@
+.modal::backdrop {
+  background-color: grey;
+  opacity: 50%;
+}
+
+.modal {
+  max-width: 70vw;
+  position: fixed;
+  margin: auto;
+  cursor: default;
+}
+
+.content {
+  padding: 10px 20px;
+}
+
+.closeButton {
+  padding: 0px 0px 0px 4px;
+  float: right;
+}

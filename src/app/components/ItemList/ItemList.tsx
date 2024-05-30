@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./ItemList.module.css";
 import Tile from "../Tile/Tile";
 import { useInView } from "react-intersection-observer";
@@ -18,7 +18,6 @@ export default function ItemList({
   const { ref, inView } = useInView({ rootMargin: "400px 0px" });
 
   useEffect(() => {
-    console.log(inView);
     if (inView && fetchMorePhotos) {
       fetchMorePhotos();
     }

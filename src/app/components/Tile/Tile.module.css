@@ -1,6 +1,7 @@
 .tile {
   width: 100%;
   animation: load-in 1 700ms;
+  cursor: zoom-in;
 }
 
 @keyframes load-in {
@@ -10,9 +11,4 @@
   to {
     opacity: 1;
   }
-}
-
-.tileImage {
-  display: block;
-  width: 100%;
 }
