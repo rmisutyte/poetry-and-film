@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import styles from "./ItemList.module.css";
-import Tile from "../Tile/Tile";
+import styles from "./ImageList.module.css";
+import ImageTile from "../ImageTile/ImageTile";
 import { useInView } from "react-intersection-observer";
 
 type GalleryItem = {
@@ -8,7 +8,7 @@ type GalleryItem = {
   name: string;
 };
 
-export default function ItemList({
+export default function ImageList({
   items,
   fetchMorePhotos,
 }: {
@@ -25,9 +25,9 @@ export default function ItemList({
 
   return (
     <>
-      <div className={styles.itemList}>
+      <div className={styles.ImageList}>
         {items.map((item, index) => (
-          <Tile imageSrc={item.imageUrl} alt={item.name} key={index} />
+          <ImageTile imageSrc={item.imageUrl} alt={item.name} key={index} />
         ))}
       </div>
       <div ref={ref}></div>

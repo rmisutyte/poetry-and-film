@@ -1,4 +1,4 @@
-.tile {
+.ImageTile {
   width: 100%;
   animation: load-in 1 700ms;
   cursor: zoom-in;

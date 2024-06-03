@@ -1,6 +1,6 @@
 "use client";
 
-import ItemList from "../../components/ItemList/ItemList";
+import ImageList from "../../components/ImageList/ImageList";
 import { LoadingSkeleton } from "../../components/LoadingSkeleton/LoadingSkeleton";
 import { usePersonalPhotos } from "@/app/hooks/usePersonalPhotos";
 
@@ -11,7 +11,7 @@ export default function Gallery() {
       {loading ? (
         <LoadingSkeleton />
       ) : (
-        <ItemList items={photos} fetchMorePhotos={fetchMorePhotos} />
+        <ImageList items={photos} fetchMorePhotos={fetchMorePhotos} />
       )}
     </>
   );

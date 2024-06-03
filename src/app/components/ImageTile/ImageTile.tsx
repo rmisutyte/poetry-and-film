@@ -1,15 +1,15 @@
-import styles from "./Tile.module.css";
+import styles from "./ImageTile.module.css";
 import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
 
-type TileItem = {
+type ImageTileItem = {
   imageSrc: string;
   alt: string;
 };
 
 const ONE_COLUMN_LAYOUT_BREAK = 711;
 
-export default function Tile({ imageSrc, alt }: TileItem) {
+export default function ImageTile({ imageSrc, alt }: ImageTileItem) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -34,12 +34,14 @@ export default function Tile({ imageSrc, alt }: TileItem) {
   }, [width]);
 
   return (
-    <figure className={styles.tile}>
-      <div onClick={openModal}>
-        <picture>
-          <source srcSet={imageSrc} />
-          <img src={imageSrc} alt={alt}></img>
-        </picture>
+    <div>
+      <div aria-label="this is an image" onClick={openModal}>
+        <figure className={styles.ImageTile}>
+          <picture>
+            <source srcSet={imageSrc} />
+            <img src={imageSrc} alt={alt}></img>
+          </picture>
+        </figure>
       </div>
       {isModalOpen && (
         <Modal openModal={isModalOpen} closeModal={closeModal}>
@@ -49,6 +51,6 @@ export default function Tile({ imageSrc, alt }: TileItem) {
           </picture>
         </Modal>
       )}
-    </figure>
+    </div>
   );
 }

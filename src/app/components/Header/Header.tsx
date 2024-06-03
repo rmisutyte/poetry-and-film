@@ -10,7 +10,7 @@ export default function Header() {
         </div>
         <div className={styles.navigation}>
           <a href="/gallery">Gallery</a>
-          <a href="/about">About</a>
+          <a href="/poems">Poems</a>
         </div>
       </div>
     </header>
