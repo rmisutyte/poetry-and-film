@@ -1,7 +1,7 @@
 .header {
   text-align: left;
   grid-area: header;
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: span 2;
 }
 

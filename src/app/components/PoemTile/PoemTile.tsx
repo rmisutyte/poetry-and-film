@@ -12,7 +12,7 @@ export default function PoemTile({ name, body, author }: PoemTileItem) {
       <figcaption>
         <cite>{name}</cite> by {author}
       </figcaption>
-      <p className={styles.body}>{body}</p>
+      <p className={styles.poemBody}>{body}</p>
     </figure>
   );
 }

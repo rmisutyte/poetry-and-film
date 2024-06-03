@@ -35,12 +35,17 @@ export default function ImageTile({ imageSrc, alt }: ImageTileItem) {
 
   return (
     <div>
-      <div aria-label="this is an image" onClick={openModal}>
-        <figure className={styles.ImageTile}>
+      <div
+        className={styles.ImageTile}
+        aria-label="this is an image"
+        onClick={openModal}
+      >
+        <figure>
           <picture>
             <source srcSet={imageSrc} />
             <img src={imageSrc} alt={alt}></img>
           </picture>
+          <figcaption>{alt}</figcaption>
         </figure>
       </div>
       {isModalOpen && (

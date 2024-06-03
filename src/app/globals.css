@@ -3,13 +3,14 @@
 header {
   position: sticky;
   top: 0px;
+  z-index: 10;
 }
 
 h1 {
   font-size: 30px;
 }
 h2 {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 p {
