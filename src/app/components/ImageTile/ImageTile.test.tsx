@@ -8,7 +8,7 @@ describe("Header component", () => {
   };
   it("Should render", async () => {
     render(<ImageTile {...defaultProps} />);
-    const imageImageTile = await screen.findByAltText("test");
-    expect(imageImageTile).toBeInTheDocument();
+    const imageTile = await screen.findByAltText("test");
+    expect(imageTile).toBeInTheDocument();
   });
 });
