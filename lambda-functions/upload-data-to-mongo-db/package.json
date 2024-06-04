@@ -1,0 +1,10 @@
+{
+  "name": "upload-data-to-mongo-db",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.588.0",
+    "mongodb": "^6.6.2"
+  }
+}

@@ -1,26 +1,18 @@
-name: Deploy App
+name: Deploy Lambda function
 
 on:
   push:
-    branches: [main]
-
-env:
-  AWS_REGION: "us-east-1"
-
-permissions:
-  id-token: write
-  contents: read
+    paths:
+      - lambda-functions/**
 
 jobs:
-  upload_assets:
-    name: Upload Assets
-    runs-on: ubuntu-latest
+  deploy:
+    name: Deploy
+    uses: ubuntu-latest
+    working-directory: ./lambda-functions/upload-data-to-mongo-db
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
-
-      - name: Enable Corepack
-        run: corepack enable
 
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
@@ -31,8 +23,8 @@ jobs:
       - name: Install deps
         run: yarn install --frozen-lockfile
 
-      - name: Build the app
-        run: yarn build
+      - name: zip folder
+        run: zip -r upload-data-to-mongo-db.zip *
 
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
@@ -41,6 +33,6 @@ jobs:
           role-session-name: GitHub_to_AWS_via_FederatedOIDC
           aws-region: ${{ env.AWS_REGION }}
 
-      # - name: Copy assets
-      #   run: |
-      #     aws s3 sync .next s3://poems-and-film-prod/.next --region us-east-1
+      - name: Upload code to S3
+        run: |
+          aws s3 sync upload-data-to-mongo-db.zip s3://poems-and-film-lambdas/upload-data-to-mongo-db.zip --region us-east-1
