@@ -2,8 +2,9 @@ name: Deploy Lambda function
 
 on:
   push:
-    paths:
-      - lambda-functions/**
+    branches: [main]
+    # paths:
+    #   - lambda-functions/**
 
 jobs:
   deploy:
