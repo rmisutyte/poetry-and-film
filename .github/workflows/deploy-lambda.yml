@@ -8,8 +8,11 @@ on:
 jobs:
   deploy:
     name: Deploy
-    uses: ubuntu-latest
-    working-directory: ./lambda-functions/upload-data-to-mongo-db
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./lambda-functions/upload-data-to-mongo-db
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v4
