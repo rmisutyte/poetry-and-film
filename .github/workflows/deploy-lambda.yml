@@ -6,6 +6,9 @@ on:
     # paths:
     #   - lambda-functions/**
 
+env:
+  AWS_REGION: "us-east-1"
+
 jobs:
   deploy:
     name: Deploy
