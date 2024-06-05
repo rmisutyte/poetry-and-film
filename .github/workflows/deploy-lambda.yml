@@ -2,9 +2,10 @@ name: Deploy Lambda - Upload to MongoDB
 
 on:
   push:
-    branches: [main]
-    # paths:
-    #   - lambda-functions/**
+    branches:
+      - main
+    paths:
+      - lambda-functions/**
 
 env:
   AWS_REGION: "us-east-1"
