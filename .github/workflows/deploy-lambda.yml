@@ -46,4 +46,4 @@ jobs:
 
       - name: Upload code to S3
         run: |
-          aws s3 sync . s3://poems-and-film-lambdas/ --region us-east-1 --exclude='*' --include='*/upload-data-to-mongo-db.zip'
+          aws s3 sync . s3://poems-and-film-lambdas/upload-data-to-mongodb --region us-east-1 --exclude='*' --include='*/upload-data-to-mongo-db.zip'
