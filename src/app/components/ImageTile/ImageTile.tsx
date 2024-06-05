@@ -4,12 +4,12 @@ import Modal from "../Modal/Modal";
 
 type ImageTileItem = {
   imageSrc: string;
-  alt: string;
+  name: string;
 };
 
 const ONE_COLUMN_LAYOUT_BREAK = 711;
 
-export default function ImageTile({ imageSrc, alt }: ImageTileItem) {
+export default function ImageTile({ imageSrc, name }: ImageTileItem) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -30,29 +30,24 @@ export default function ImageTile({ imageSrc, alt }: ImageTileItem) {
       setWidth(window.innerWidth);
     };
     window.addEventListener("resize", updateWindowWidth);
-    console.log(width);
   }, [width]);
 
   return (
     <div>
-      <div
-        className={styles.ImageTile}
-        aria-label="this is an image"
-        onClick={openModal}
-      >
+      <div className={styles.ImageTile} aria-label={name} onClick={openModal}>
         <figure>
           <picture>
             <source srcSet={imageSrc} />
-            <img src={imageSrc} alt={alt}></img>
+            <img src={imageSrc} alt={name}></img>
           </picture>
-          <figcaption>{alt}</figcaption>
+          <figcaption>{name}</figcaption>
         </figure>
       </div>
       {isModalOpen && (
         <Modal openModal={isModalOpen} closeModal={closeModal}>
           <picture>
             <source srcSet={imageSrc} />
-            <img src={imageSrc} alt={alt}></img>
+            <img src={imageSrc} alt={name}></img>
           </picture>
         </Modal>
       )}

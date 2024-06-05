@@ -27,7 +27,7 @@ export default function ImageList({
     <>
       <div className={styles.ImageList}>
         {items.map((item, index) => (
-          <ImageTile imageSrc={item.imageUrl} alt={item.name} key={index} />
+          <ImageTile imageSrc={item.imageUrl} name={item.name} key={index} />
         ))}
       </div>
       <div ref={ref}></div>
