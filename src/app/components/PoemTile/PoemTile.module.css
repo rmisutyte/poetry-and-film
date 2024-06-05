@@ -1,3 +1,25 @@
+@value fontSizes: "../../../font-sizes.css";
+@value paragraph from fontSizes;
+
+.container {
+  position: relative;
+}
 .poemBody {
   white-space: pre-wrap;
+  max-height: 200px;
+  overflow: hidden;
+  display: block;
+}
+
+.poemBody::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(transparent 70%, white);
+}
+
+.linkContainer {
+  margin: 6px 0px 0px 0px;
 }

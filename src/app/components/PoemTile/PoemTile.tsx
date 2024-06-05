@@ -8,11 +8,17 @@ type PoemTileItem = {
 
 export default function PoemTile({ name, body, author }: PoemTileItem) {
   return (
-    <figure>
-      <figcaption>
-        <cite>{name}</cite> by {author}
-      </figcaption>
-      <p className={styles.poemBody}>{body}</p>
-    </figure>
+    <div className={styles.preview}>
+      <div className={styles.container}>
+        <div className={styles.poemBody}>
+          <h2>{name}</h2>
+          <h3> by {author}</h3>
+          <p>{body}</p>
+        </div>
+      </div>
+      <div className={styles.linkContainer}>
+        <a href="/poems">Read more</a>
+      </div>
+    </div>
   );
 }
