@@ -1,6 +1,3 @@
-@value fontSizes: "../../../font-sizes.css";
-@value paragraph from fontSizes;
-
 .container {
   position: relative;
 }

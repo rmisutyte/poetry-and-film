@@ -1,5 +1,7 @@
 @tailwind base;
 
+@value paragraph: 18px;
+
 header {
   position: sticky;
   top: 0px;
