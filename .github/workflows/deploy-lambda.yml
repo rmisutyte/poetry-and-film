@@ -1,4 +1,4 @@
-name: Deploy Lambda function
+name: Deploy Lambda - Upload to MongoDB
 
 on:
   push:
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy
+    name: Deploy lambda to S3
     runs-on: ubuntu-latest
     defaults:
       run:
