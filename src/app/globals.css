@@ -3,7 +3,7 @@
 @value paragraph: 18px;
 
 header {
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
   z-index: 10;
 }

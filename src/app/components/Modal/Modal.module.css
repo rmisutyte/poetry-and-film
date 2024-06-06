@@ -4,10 +4,8 @@
 }
 
 .modal {
-  max-width: 70vw;
+  max-width: 60vw;
   position: fixed;
-  margin: auto;
-  cursor: default;
 }
 
 .content {

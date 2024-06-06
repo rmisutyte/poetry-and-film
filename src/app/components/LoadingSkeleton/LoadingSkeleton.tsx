@@ -5,7 +5,7 @@ export function ImageSkeleton() {
 }
 
 const items = [
-  ...Array(8).map(() => {
+  ...Array(9).map(() => {
     return {};
   }),
 ];
